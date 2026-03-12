@@ -13,7 +13,6 @@ body {
     perspective: 1500px;
 }
 
-/* Fondo con el reloj central ya incluido */
 .fondo {
     position: fixed;
     top: 0;
@@ -29,7 +28,6 @@ body {
     object-fit: cover;
 }
 
-/* Estilo de las Ventanas Flotantes */
 .carta {
     position: absolute;
     width: 280px; 
@@ -42,13 +40,11 @@ body {
     flex-direction: column;
     align-items: center;
     z-index: 10;
-    
-    /* Efecto Cristal MÁS TRANSPARENTE */
+   
     background: rgba(255, 255, 255, 0.03); 
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     
-    /* Borde Neón Permanente MÁS TRANSPARENTE */
     transform: scale(1.05) translateY(-5px);
     border: 1px solid rgba(255, 255, 255, 0.1); 
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 
@@ -73,7 +69,6 @@ body {
     object-fit: contain;
     margin-bottom: 15px;
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
-    /* Transición añadida para el desvanecimiento */
     transition: all 0.5s ease;
 }
 
@@ -86,7 +81,7 @@ body {
     transition: all 0.5s ease;
 }
 
-/* --- POSICIONAMIENTO ESTRATÉGICO --- */
+/*  POSICIONAMIENTO */
 .IzqArriba { 
     top: 7%; 
     left: 25%; 
@@ -125,47 +120,40 @@ body {
     transform-origin: left center; 
 }
 
-/* --- NUEVAS REGLAS PARA EL EFECTO DE DATOS INVISIBLES --- */
 
-/* Contenedor de información que aparece al hacer hover */
 .info-extra {
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     width: 80%;
-    opacity: 0; /* Invisible por defecto */
-    filter: blur(10px); /* Desenfoque inicial */
+    opacity: 0; 
+    filter: blur(10px); 
     transition: all 0.5s ease;
     pointer-events: none;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* --- COMPORTAMIENTO HOVER --- */
-
 .carta:hover {
     transform: scale(1.1) rotateY(0deg) rotateX(0deg) !important;
     z-index: 100;
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
-    background: rgba(255, 255, 255, 0.12); /* Se vuelve un pelín más sólida */
+    background: rgba(255, 255, 255, 0.12); 
 }
 
-/* El reloj se vuelve casi invisible y se aleja */
 .carta:hover img {
     opacity: 0.05;
     transform: scale(0.6) translateY(-20px);
     filter: blur(8px);
 }
 
-/* Los datos técnicos aparecen nítidos */
 .carta:hover .info-extra {
     opacity: 1;
     filter: blur(0px);
     transform: translate(-50%, -50%) scale(1);
 }
 
-/* El precio resalta más cuando ves la info */
 .carta:hover span {
     transform: translateY(-10px);
     color: #fff;
