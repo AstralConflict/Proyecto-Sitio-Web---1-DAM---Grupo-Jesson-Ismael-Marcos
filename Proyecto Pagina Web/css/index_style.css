@@ -1,0 +1,115 @@
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid 1px white;
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+#seccionPrincipal { 
+    width: 100%;
+    height: 100vh;
+}
+
+#seccionPrincipal .imagenFondo { 
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto ahce que la imagen cubra todo el contenedor, como background-size: cover */
+    object-position: center; /* Hace que la imagen se centre en el contenedor */
+} 
+
+.carta {
+    position: absolute;
+    width: 230px;
+    height: 330px;
+    background: white;
+    border-radius: 15px;
+}
+
+#menuLogo {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cajitaLogo {
+    height: 80%;
+    width: 100px;
+    background-color: white;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#menuNavegacion {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+
+#menuBotones {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+#degradadoIzquierda {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+#degradadoDerecha {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#contenedorNavMenu {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+
+}
+
+#navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navMenu ul {
+    display: flex;
+    list-style: none;
+    gap: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
