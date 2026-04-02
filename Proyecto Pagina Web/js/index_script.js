@@ -47,3 +47,29 @@ if (imagen.complete && imagen.naturalWidth) {
 
 // Podicionar la carta al cambiar el tamaño de la ventana.
 window.addEventListener("resize", modificarPosicion);
+
+
+/* Desvanecimiento Scroll */
+const contenedorSticky = document.getElementById("contenedorSticky");
+
+function desvanecerAlScrollear() {
+
+  const posicion = contenedorSticky.getBoundingClientRect(); // Obetenemos la posicion del contenedorSticky respecto a la ventana.
+
+  let scrollHecho = -posicion.top; // Guarda la posicion del contenedor respecto a la parte de arriba de la ventana, dado que la posicion sera negativa dado que al hacer scroll va hacia abajo la vonvertimos en positiva con el -.
+  console.log(scrollHecho);
+
+  if (scrollHecho < 200) { // Limite minimo para el desvanecimiento.
+      scrollHecho = 0;
+  }
+
+  if (scrollHecho > 700) { // Limite maximo para el desvanecimiento.
+      scrollHecho = 700;
+  }
+
+  imagen.style.opacity = 1 - (scrollHecho / 900); // Le restamos opacidad a la imagen en funcion del scroll, con un limite de 900 para que no se vuelva completamente transparente.
+  carta.style.opacity = 1 - (scrollHecho / 700); // Le restamos opacidad a la carta en funcion del scroll, con un limite de 700 para que no se vuelva completamente transparente.
+
+}
+
+window.addEventListener("scroll", desvanecerAlScrollear);

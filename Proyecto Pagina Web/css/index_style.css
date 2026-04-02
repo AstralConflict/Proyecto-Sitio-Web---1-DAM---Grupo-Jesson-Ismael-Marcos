@@ -15,11 +15,15 @@ header {
     z-index: 2;
     display: grid;
     grid-template-columns: 20% 60% 20%;
+    position: fixed;
 }
 
 #seccionPrincipal { 
     width: 100%;
     height: 100vh;
+    position: sticky; /* Hace que la seccion se pegue a la pantalla mientras se hace scroll hasta que acaba el div que la contiene (contenedorSticky). */
+    top: 0;
+    z-index: 1;
 }
 
 #seccionPrincipal .imagenFondo { 
@@ -29,7 +33,14 @@ header {
     height: 100%;
     object-fit: cover; /* Esto ahce que la imagen cubra todo el contenedor, como background-size: cover */
     object-position: center; /* Hace que la imagen se centre en el contenedor */
-} 
+}
+
+#contenedorSticky {
+    height: 160vh;
+    position: relative;
+    z-index: -1;
+    background-color: black;
+}
 
 .carta {
     position: absolute;
@@ -112,4 +123,60 @@ header {
     font-family: 'Clash Display', sans-serif;
     font-weight: 500;
     font-size: 24px;
+}
+
+#bentoGrid {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0.5) 95%, rgba(255, 255, 255, 0) 100%);
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 70px;
+    margin-top: -60vh;
+    z-index: 10;
+}
+
+.contenedorBento {
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "cartaBento1 cartaBento2 cartaBento2 cartaBento3"
+    "cartaBento1 cartaBento5 cartaBento6 cartaBento6";
+    grid-gap: 10px;
+    z-index: 10;
+}
+
+.cartaBento {
+    border-radius: 30px;
+    background-color: wheat;
+    height: 100%;
+    width: 100%;
+}
+
+.cartaBento1 {
+    grid-area: cartaBento1;
+}
+
+.cartaBento2 {
+    grid-area: cartaBento2;
+}
+
+.cartaBento3 {
+    grid-area: cartaBento3;
+}
+
+.cartaBento4 {
+    grid-area: cartaBento4;
+}
+
+.cartaBento5 {
+    grid-area: cartaBento5;
+}
+
+.cartaBento6 {
+    grid-area: cartaBento6;
 }
