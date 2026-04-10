@@ -2,7 +2,7 @@ const seccionPrincipal = document.getElementById("seccionPrincipal");
 const imagen = document.querySelector("#seccionPrincipal .imagenFondo");
 const carta = document.querySelector("#seccionPrincipal .carta");
 
-const puntoImagen = { x: 390, y: 780 };
+const puntoImagen = { x: 390, y: 700 };
 
 function modificarPosicion() {
   

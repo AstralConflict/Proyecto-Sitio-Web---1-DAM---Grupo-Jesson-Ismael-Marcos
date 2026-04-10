@@ -32,7 +32,8 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Esto ahce que la imagen cubra todo el contenedor, como background-size: cover */
-    object-position: center; /* Hace que la imagen se centre en el contenedor */
+    /* object-position: center; /* Hace que la imagen se centre en el contenedor */
+    object-position: bottom;
 }
 
 #contenedorSticky {
@@ -60,16 +61,40 @@ header {
 }
 
 #cajitaLogo {
-    height: 80%;
+    height: 90%;
     width: 100px;
-    background-color: white;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-image: url("../multimedia/LogoProvisional.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cajitaBotones {
+    height: 90%;
+    width: 100px;
+    background-image: url("../multimedia/FondoCajaBotones.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: -5px; /* Un pequeño ajuste de la posicion para que quede mas abajo. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botonInicio {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.botonInicio img {
+    height: 100%;
+    width: 100%;
 }
 
 #menuNavegacion {
@@ -84,6 +109,9 @@ header {
     height: 100%;
     width: 100%;
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #degradadoIzquierda {
