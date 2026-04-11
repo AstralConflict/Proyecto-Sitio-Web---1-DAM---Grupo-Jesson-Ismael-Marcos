@@ -260,6 +260,7 @@ header {
     display: flex;
     justify-content: right;
     position: relative;
+    flex-direction: column;
 }
 
 .pColorReloj {
@@ -329,14 +330,6 @@ header {
     margin-top: 2vh;
 }
 
-.pBordeIzquierda {
-    position: absolute;
-    top: 25px;
-    left: -10px;
-    font-size: 12rem;
-    z-index: -1;
-}
-
 .pBordeCentro {
     position: absolute;
     top: 25px;
@@ -385,14 +378,14 @@ header {
 
 .contenedorLemaYImagen {
     height: 200px;
-    width: 90%;
+    width: 100%;
     display: flex;
     gap: 10px;
 }
 
 .contenedorLema {
     height: 100%;
-    width: 60%;
+    width: 70%;
 }
 
 .pLema {
@@ -406,7 +399,6 @@ header {
 
 .contenedorImagenLema {
     height: 100%;
-    width: 40%;
     display: flex;
     align-items: right;
     justify-content: right;
@@ -418,6 +410,37 @@ header {
 
 .pBordeDerecha {
     position: absolute;
-    top: 35vh;
+    top: 32vh;
     left: 0;
+}
+
+.contenedorTablaExpositor {
+    width: 100%;
+    height: 300px;
+    margin-top: 30vh;
+}
+
+.contenedorTablaExpositor table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+}
+
+.titulosTabla {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.555);
+    height: 50px;
+}
+
+.tablaEspecificaciones tbody td {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.637);
+    text-align: center;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.555);
 }
