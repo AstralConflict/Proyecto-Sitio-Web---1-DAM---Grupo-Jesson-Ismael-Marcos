@@ -1,4 +1,6 @@
 @import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700,1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 
 * {
   margin: 0;
@@ -155,10 +157,10 @@ header {
 
 #bentoGrid {
     width: 100%;
-    height: 100vh;
+    height: 85vh;
     background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0.5) 95%, rgba(255, 255, 255, 0) 100%);
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
     padding-top: 70px;
     margin-top: -60vh;
     z-index: 10;
@@ -167,7 +169,7 @@ header {
 .contenedorBento {
     background-color: transparent;
     width: 100%;
-    height: 100vh;
+    height: 75vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -183,6 +185,9 @@ header {
     background-color: wheat;
     height: 100%;
     width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .cartaBento1 {
@@ -191,10 +196,12 @@ header {
 
 .cartaBento2 {
     grid-area: cartaBento2;
+    background-image: url(../multimedia/RelojesBentoGridPrueba1.png);
 }
 
 .cartaBento3 {
     grid-area: cartaBento3;
+    background-image: url(../multimedia/Reloj\ de\ lujo\ en\ caja\ de\ presentación.png);
 }
 
 .cartaBento4 {
@@ -207,4 +214,79 @@ header {
 
 .cartaBento6 {
     grid-area: cartaBento6;
+    background-image: url(../multimedia/RelojBentoGridPruebaFondoMontañas.png);
+}
+
+#contenedorExpositorReloj {
+    width: 100%;
+    height: 200vh;
+    background-color: transparent;
+}
+
+.expositorReloj {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../multimedia/FondoSeccionExpositor.png);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: sticky;
+    top: 0;
+}
+
+.secionExpIzquierda {
+    height: 100%;
+    background-color: transparent;
+    padding-top: 15vh;
+    padding-left: 40px;
+}
+.seccionExpCentro {
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+.seccionExpDerecha {
+    height: 100%;
+    background-color: transparent;
+}
+
+.pColorReloj {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.637);
+    margin-bottom: -15px;
+    margin-left: 10px;
+}
+
+.nombreReloj {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 7rem;
+    color: rgb(255, 255, 255);
+}
+
+.pReferenciaReloj {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.637);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.contenedorImagenExpositor {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#imagenRelojCaelum {
+    height: 90%;
 }
