@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+    background-color: #0D0C08;
+}
+
 header {
     height: 60px;
     width: 100%;
@@ -39,7 +43,7 @@ header {
 }
 
 #contenedorSticky {
-    height: 160vh;
+    height: 170vh;
     position: relative;
     z-index: -1;
     background-color: black;
@@ -128,7 +132,7 @@ header {
     background-color: white;
     display: flex;
     justify-content: center;
-
+    z-index: 1;
 }
 
 #navMenu {
@@ -162,7 +166,7 @@ header {
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 70px;
-    margin-top: -60vh;
+    margin-top: -70vh;
     z-index: 10;
 }
 
@@ -237,7 +241,7 @@ header {
     height: 100%;
     background-color: transparent;
     padding-top: 15vh;
-    padding-left: 40px;
+    padding-left: 50px;
 }
 .seccionExpCentro {
     height: 100%;
@@ -246,10 +250,16 @@ header {
     align-items: center;
     justify-content: center;
     padding-top: 60px;
+    position: relative;
 }
 .seccionExpDerecha {
     height: 100%;
     background-color: transparent;
+    padding-top: 15vh;
+    padding-right: 50px;
+    display: flex;
+    justify-content: right;
+    position: relative;
 }
 
 .pColorReloj {
@@ -266,7 +276,9 @@ header {
     font-weight: 900;
     font-style: italic;
     font-size: 7rem;
-    color: rgb(255, 255, 255);
+    color: white;
+    margin-left: -10px;
+    position: absolute; /* Para que se superponga a la imagen del reloj si la pantalla se hace mas pequeña. */
 }
 
 .pReferenciaReloj {
@@ -274,8 +286,88 @@ header {
     font-weight: 300;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.637);
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 290px;
+}
+
+.contenedorCompraExpositor {
+    margin-top: 8vh;
+}
+
+.pPrecioExpositor {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.botonAniadirCarritoExpositor {
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    height: 50px;
+    width: 350px;
+    margin-top: 5px;
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+    cursor: pointer;
+}
+
+.botonAniadirCarritoExpositor:hover {
+    background-color: white;
+    color: black;
+    transition: 0.3s;
+}
+
+.pConBorde {
+    font-family: 'times new roman', serif;
+    font-size: 15rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.178); /* Grosor y color del borde del texto */
+    margin-top: 2vh;
+}
+
+.pBordeIzquierda {
+    position: absolute;
+    top: 25px;
+    left: -10px;
+    font-size: 12rem;
+    z-index: -1;
+}
+
+.pBordeCentro {
+    position: absolute;
+    top: 25px;
+    left: -10px;
+    font-size: 12rem;
+    z-index: -1;
+}
+
+.botonSiguienteReloj {
+    position: absolute;
+    bottom: 30px;
+    font-family: 'Clash Display', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    height: 35px;
+    width: 120px;
+    background-color: transparent;
+    border: solid 1px rgba(255, 255, 255, 0.24);
+    color: rgba(255, 255, 255, 0.822);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botonSiguienteReloj img {
+    height: 20px;
+    color: white;
+    margin-right: 5px;
+    margin-left: -5px;
 }
 
 .contenedorImagenExpositor {
@@ -289,4 +381,43 @@ header {
 
 #imagenRelojCaelum {
     height: 90%;
+}
+
+.contenedorLemaYImagen {
+    height: 200px;
+    width: 90%;
+    display: flex;
+    gap: 10px;
+}
+
+.contenedorLema {
+    height: 100%;
+    width: 60%;
+}
+
+.pLema {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 200;
+    font-size: 1.8rem;
+    font-style: italic;
+    color: white;
+    text-align: right;
+}
+
+.contenedorImagenLema {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.contenedorImagenLema img {
+    height: 100%;
+}
+
+.pBordeDerecha {
+    position: absolute;
+    top: 35vh;
+    left: 0;
 }
