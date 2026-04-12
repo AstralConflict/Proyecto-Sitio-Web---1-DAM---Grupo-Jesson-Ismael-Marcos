@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +7,8 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-image: url("../../Recursos Proyecto/Imagenes/imagenFormulario.png");
+    font-family: 'Libre Caslon Text', sans-serif;
+    background-image: url("../../Recursos Proyecto/Imagenes/Fondo_formulario.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,14 +19,29 @@ body {
 }
 
 form {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(3px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 40px 50px;
-    width: 420px;
+    padding: 70px 70px;
+    width: 550px;
+    height: 750px;
     color: #ffffff;
     text-align: left;
+    animation: blur-in-expand 0.7s linear both;
+}
+
+@keyframes blur-in-expand {
+  0% {
+    transform: scale(0.8);
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
 
 .descripcion {
@@ -38,11 +55,12 @@ form {
     background-color: rgba(224, 222, 222, 0.3);
     border: 1px solid #ffffff;
     color: white;
-    padding: 10px 20px;
+    padding: 20px 30px;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 auto;
-    display: flex;                                
+    margin: 30px auto;
+    display: flex;  
+    font-size: 17px;                           
 }
 .enviar:hover {
     background-color: #c7c7c7;
@@ -54,7 +72,7 @@ input, textarea {
     margin: 5px 0;
     border: 1px solid #ffffff;
     border-radius: 5px;
-    background-color: rgba(224, 222, 222, 0.3);
+    background-color: rgba(95, 95, 95, 0.3);
     backdrop-filter: blur(10px);
     color: white;
 }
@@ -63,9 +81,18 @@ h1 {
     text-align: center;
     margin-bottom: 20px;
     -webkit-text-stroke: 0.2px black;
+    margin-bottom: 40px;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
 label {
+    font-family: sans-serif;
     font-weight: 500;
     color: #ffffff;
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
 }
+
