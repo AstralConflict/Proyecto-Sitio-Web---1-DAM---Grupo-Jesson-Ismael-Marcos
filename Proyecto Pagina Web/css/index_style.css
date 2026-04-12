@@ -45,8 +45,8 @@ header {
 #contenedorSticky {
     height: 170vh;
     position: relative;
-    z-index: -1;
     background-color: black;
+    z-index: 1;
 }
 
 .carta {
@@ -55,6 +55,53 @@ header {
     height: 330px;
     background: white;
     border-radius: 15px;
+}
+
+.contenedorTituloSeccionPrincipal {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Con esto lo que hago es mover el elemento hacia arriba y hacia la izquierda la mitad de su propio tamaño, para que quede en la mitad segun su centro no segun el inicio del contenedor, osea que quede centrado. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tituloSeccionPrincipal {
+    font-family: 'Figtree', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    letter-spacing: 2rem;
+    color: white;
+}
+
+.subTituloSeccionPrincipal {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.botonSeccionPrincipal {
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 100;
+    font-size: 3rem;
+    letter-spacing: 1.5px;
+    width: 250px;
+    border-radius: 100px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-color: transparent;
+    border: solid 1px white;
+    color: white;
+    cursor: pointer;
+
 }
 
 #menuLogo {
@@ -162,12 +209,13 @@ header {
 #bentoGrid {
     width: 100%;
     height: 85vh;
+    position: relative;
     background: linear-gradient(180deg,rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0.5) 95%, rgba(255, 255, 255, 0) 100%);
     padding-left: 100px;
     padding-right: 100px;
     padding-top: 70px;
     margin-top: -70vh;
-    z-index: 10;
+    z-index: 2;
 }
 
 .contenedorBento {
@@ -181,7 +229,7 @@ header {
     "cartaBento1 cartaBento2 cartaBento2 cartaBento3"
     "cartaBento1 cartaBento5 cartaBento6 cartaBento6";
     grid-gap: 10px;
-    z-index: 10;
+    z-index: 2;
 }
 
 .cartaBento {
@@ -235,6 +283,7 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     position: sticky;
     top: 0;
+    overflow: hidden;
 }
 
 .secionExpIzquierda {
@@ -507,11 +556,23 @@ footer {
     justify-content: left;
     list-style: none;
     margin-left: 2.2%;
+    margin-right: 2.2%;
     width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .contenedorFooterArriba ul li {
-    margin-right: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorFooterArriba ul li:first-child { /* Selecciono el primer li de la lista */
+    justify-content: left;
+}
+
+.contenedorFooterArriba ul li:last-child { /* Selecciono el ultimo li de la lista */
+    justify-content: right;
 }
 
 .contenedorFooterArriba ul a {
@@ -563,10 +624,22 @@ footer {
 
 .pTituloFooterArriba {
     margin-left: -15px;
+    transition: margin-left 0.5s ease; /* Hago que la transformacion del margen al volver a su estado original sea progresiva */
 }
 
 .pTituloFooterAbajo {
     margin-right: -15px;
+    transition: margin-right 0.5s ease;
+}
+
+.pTituloFooterArriba:hover {
+    margin-left: 0px;
+    transition: margin-left 0.5s ease; /* Hago que la transformacion del margen sea progresiva */ 
+}
+
+.pTituloFooterAbajo:hover {
+    margin-right: 0px;
+    transition: margin-right 0.5s ease;
 }
 
 .contenedorFooterAbajo p {
@@ -585,4 +658,11 @@ footer {
   .expositorReloj {
     grid-template-columns: 1fr 2fr;
   }
+}
+
+
+@media screen and (min-width: 2068px) {
+    .pTituloFooter {
+        font-size: 16vw;
+    }
 }
