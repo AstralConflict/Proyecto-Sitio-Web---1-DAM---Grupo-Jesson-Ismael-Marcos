@@ -2,19 +2,19 @@ header {
     border-bottom: solid 1px rgb(0, 0, 0);
 }
 
-#degradadoIzquierda {
+.degradadoIzquierda {
     background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, #0D0C08 100%);
 }
 
-#degradadoDerecha {
+.degradadoDerecha {
     background: linear-gradient(90deg,#0D0C08 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-#contenedorNavMenu {
+.contenedorNavMenu {
     background-color: #0D0C08;
 }
 
-#navMenu a {
+.navMenu a {
     color: white;
 }
 

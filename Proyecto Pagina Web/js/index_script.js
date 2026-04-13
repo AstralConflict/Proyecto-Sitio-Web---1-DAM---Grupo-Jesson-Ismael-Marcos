@@ -2,7 +2,7 @@ const seccionPrincipal = document.getElementById("seccionPrincipal");
 const imagen = document.querySelector("#seccionPrincipal .imagenFondo");
 const cartaReloj = document.querySelector("#seccionPrincipal .cartaReloj");
 
-const puntoImagen = { x: 390, y: 660 };
+const puntoImagen = { x: 390, y: 650 };
 
 function modificarPosicion() {
   
