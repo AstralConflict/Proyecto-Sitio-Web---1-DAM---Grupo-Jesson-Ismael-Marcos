@@ -1,0 +1,195 @@
+header {
+    border-bottom: solid 1px rgb(0, 0, 0);
+}
+
+#degradadoIzquierda {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, #0D0C08 100%);
+}
+
+#degradadoDerecha {
+    background: linear-gradient(90deg,#0D0C08 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#contenedorNavMenu {
+    background-color: #0D0C08;
+}
+
+#navMenu a {
+    color: white;
+}
+
+main {
+    height: 100vh;
+    /*background-color: #f0f8ff;*/
+    background-color: #f6f7f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccionTitulo {
+    width: 1640px;
+    height: 20vh;
+    display: flex;
+    justify-content: end;
+    align-items: right;
+    flex-direction: column;
+}
+
+.tituloCarrito {
+    font-family: 'Inter', sans-serif;
+    color: #0F172A;
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+.seccionTitulo p {
+    font-family: 'Inter', sans-serif;
+    color: #64748B;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.seccionCesta {
+    width: 1640px;
+    height: 80vh;
+    display: flex;
+    justify-content: left;
+    align-items: top;
+    padding-top: 20px;
+}
+
+.contenedorResumen {
+    width: 450px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: top;
+}
+
+.contenedorResumen h2 {
+    font-family: 'Inter', sans-serif;
+    color: #0F172A;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+}
+
+.contenedorResumen p {
+    font-family: 'Inter', sans-serif;
+    color: #475569;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+}
+
+.contenedorResumen hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: solid 1px #E2E8F0;
+}
+
+.contenedorResumen table {
+    margin-top: 5px;
+    font-family: 'Inter', sans-serif;
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.7px;
+}
+
+.contenedorResumen table thead {
+    text-align: left;
+    color: #0F172A;
+}
+
+.botonCompra {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(29, 29, 29);
+    border: solid 1px #000000;
+    color: white;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+.botonCompra:hover {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    transition: 0.3s;
+}
+
+.contenedorProductos {
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    justify-content: left;
+    align-items: top;
+    padding: 20px;
+    border: solid 1px #c4cdd8;
+    border-radius: 20px;
+    margin-left: 20px;
+    gap: 10px;
+}
+
+.carta {
+    background-color: rgb(29, 29, 29);
+    position: relative;
+    width: 210px;
+}
+
+.contenedorOfertaEnvio {
+    height: 150px;
+    width: 250px;
+    background: linear-gradient(180deg,rgba(15, 24, 44, 1) 0%, rgba(15, 29, 53, 1) 100%);
+    margin-top: 30px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+}
+
+.contenedorOfertaEnvio p {
+    font-family: 'Inter', sans-serif;
+    color: #1978E5;
+    font-weight: 700;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.contenedorOfertaEnvio h3 {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-top: 4px;
+}
+
+.contenedorOfertaEnvio button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-align: left;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contenedorOfertaEnvio button img {
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+}
