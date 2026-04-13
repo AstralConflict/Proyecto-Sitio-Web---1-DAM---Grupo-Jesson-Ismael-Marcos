@@ -74,6 +74,7 @@ function desvanecerAlScrollear() {
 
 window.addEventListener("scroll", desvanecerAlScrollear);
 
+
 /* Cambia el icono del corazon que hay en la carta de inicio al hacer click */
 const botonCorazonCarta = document.querySelector(".cartaContenedorBotonCorazon button");
 const iconoCorazon = document.querySelector(".cartaContenedorBotonCorazon button img");
