@@ -8,22 +8,40 @@
 /* esto sirve para quitar los márgenes raros por defecto y que todo mida bien */
 html, body {
     height: 100%;
-    overflow: hidden;
+    margin: 0;
+    min-height: 100%;
 }
 
 /* uso flex para centrar todo y empiezo desde arriba con el contenido */
 body {
-    display: flex;
-    justify-content: center; 
-    align-items: flex-start; /* lo dejo arriba para no chocar con el header */
-    padding-top: 1px;
+    margin: 0;
+    min-height: 100vh;
 
-    /* fondo de imagen que cubre toda la pantalla */
+    position: relative;
+    
+    /* Fondo que curbre */
     background-image: url("../multimedia/Fondo_Personalizacion.jpg");
-    background-size: cover; /* hace que la imagen cubra todo */
-    background-position: center; 
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; /* hace efecto de fondo fijo */
+}
+
+/* Para que cuando se baje no se vena los fondos blancos. */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../multimedia/Fondo_Personalizacion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    z-index: -1;
 }
 
 /* este es el contenedor principal de toda la página */
@@ -31,6 +49,18 @@ body {
     width: 90%;
     height: 90%;
     position: relative; /* para poder posicionar cosas dentro con absolute */
+    flex: 1;
+    margin-top: 120px;
+    margin: 0 auto;
+    background: transparent;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
 }
 
 /* zona donde están los relojes */
@@ -119,7 +149,7 @@ body {
 /* caja de accesorios abajo */
 .contenedor-accesorios {
     position: absolute;
-    bottom: 5%;
+    bottom: 12%;
     left: 50%;
 
     transform: translateX(-50%);
@@ -218,7 +248,7 @@ body {
 .contenedor-carrito {
     position: absolute;
     right: -2%;
-    bottom: 12%;
+    bottom: 18%;
     z-index: 10;
 }
 
