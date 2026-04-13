@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link rel="stylesheet" href="../css/formulario_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
 </head>
 <body>
+    <header>
+        <div class="menuLogo">
+            <div class="cajitaLogo"></div>
+        </div>
+        <div class="menuNavegacion">
+            <div class="degradadoIzquierda"></div>
+            <div class="contenedorNavMenu">
+                <nav class="navMenu">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./personalizacion.html">Personalizacion</a></li>
+                        <li><a href="./comparador.html">Comparador</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="degradadoDerecha"></div>
+        </div>
+        <div class="menuBotones">
+            <div class="cajitaBotones">
+                <a href="./carrito.html" class="botonMenu">
+                    <img src="../multimedia/IconoCarrito.png" alt="Icono de carrito">
+                </a>
+                <a href="./formulario.html" class="botonMenu">
+                    <img src="../multimedia/IconoContacto.png" alt="Icono de contacto">
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form action="#" method="post">
 
-    <form action="#" method="post">
-
-    <h1>Formulario de Contacto</h1>
+        <h1>Formulario de Contacto</h1>
 
         <label for="nombre">Nombre:</label><br>
         <input type="text" id="nombre" name="nombre" required><br><br>
@@ -27,5 +58,27 @@
         <button class="enviar"  type="submit">Enviar</button>
 
     </form>
+    </main>
+    <footer>
+        <div class="contenedorFooterArriba">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./personalizacion.html">Personalizacion</a></li>
+                <li><a href="./comparador.html">Comparador</a></li>
+                <li><a href="./formulario.html">Contacto</a></li>
+                <li><a href="./carrito.html">Carrito</a></li>
+            </ul>
+        </div>
+        <div class="contenedorFooterMedio contenedorFooterMedioArriba">
+            <p class="pTituloFooter pTituloFooterArriba">RELOJES</p>
+        </div>
+        <div class="contenedorFooterMedio contenedorFooterMedioAbajo">
+            <p class="pTituloFooter pTituloFooterAbajo">RELOJES</p>
+        </div>
+        <div class="contenedorFooterAbajo">
+            <p>© 2026 Marcos Guzman, Jesson Manuel, Ismael De Frutos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

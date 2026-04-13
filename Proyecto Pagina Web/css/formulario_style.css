@@ -6,6 +6,14 @@
     box-sizing: border-box;
 }
 
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     font-family: 'Libre Caslon Text', sans-serif;
     background-image: url("../../Recursos Proyecto/Imagenes/Fondo_formulario.png");
@@ -13,9 +21,6 @@ body {
     background-size: cover;
     background-position: center;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 form {
