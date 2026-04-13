@@ -3,11 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <title>Personalizar Reloj</title>
+
     <link rel="stylesheet" href="../css/personalizacion_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
     <script src="../js/personalizacion.js"></script>
 </head>
 <body>
+<header>
+    <!-- LOGO -->
+    <div class="menuLogo">
+        <div class="cajitaLogo"></div>x
+    </div>
 
+    <!-- NAVEGACIÓN -->
+    <div class="menuNavegacion">
+        <div class="degradadoIzquierda"></div>
+
+        <div class="contenedorNavMenu">
+            <nav class="navMenu">
+                <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./personalizacion.html">Personalizacion</a></li>
+                        <li><a href="./comparador.html">Comparador</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="degradadoDerecha"></div>
+    </div>
+
+    <!-- BOTONES -->
+    <div class="menuBotones">
+        <div class="cajitaBotones">
+            <button class="botonMenu">
+                <img src="../multimedia/IconoCarrito.png" alt="Carrito">
+            </button>
+
+            <button class="botonMenu">
+                <img src="../multimedia/IconoContacto.png" alt="Contacto">
+            </button>
+        </div>
+    </div>
+</header>
 <div class="contenedor">
 
     <div class="seccion-reloj">
@@ -20,6 +59,10 @@
         <button class="flecha flecha-derecha">&#10095;</button>
     </div>
 
+    <!-- TEXTO NUEVO ENCIMA DE LOS ACCESORIOS -->
+    <h2 class="texto-personaliza">Personalízalo a tu gusto</h2>
+
+    <!-- CONTENEDOR DE ACCESORIOS -->
     <div class="contenedor-accesorios">
 
         <div class="accesorio">
@@ -35,7 +78,7 @@
             <input type="checkbox" id="joya">
             <label for="joya">
                 <span class="tick"></span>
-                <img src="../multimedia/pulsera.png">
+                <img src="../multimedia/joya.png">
                 <p>Joya</p>
             </label>
         </div>
@@ -44,7 +87,7 @@
             <input type="checkbox" id="anillo">
             <label for="anillo">
                 <span class="tick"></span>
-                <img src="anillo.png">
+                <img src="../multimedia/anillo.png">
                 <p>Anillo</p>
             </label>
         </div>
@@ -53,7 +96,7 @@
             <input type="checkbox" id="caja">
             <label for="caja">
                 <span class="tick"></span>
-                <img src="caja.png">
+                <img src="../multimedia/caja.png">
                 <p>Caja</p>
             </label>
         </div>
@@ -62,14 +105,39 @@
             <input type="checkbox" id="tarjeta-regalo">
             <label for="tarjeta-regalo">
                 <span class="tick"></span>
-                <img src="tarjeta.png">
+                <img src="../multimedia/regalo.png">
                 <p>Tarjeta</p>
             </label>
         </div>
 
     </div>
 
-</div>
+    <div class="texto-personaliza">Personalízalo a tu gusto</div>
+    <div class="contenedor-carrito">
+        <a href="../html/carrito.html" class="boton-pagar">Pagar</a>
+    </div>
 
+</div>
+   <footer>
+        <div class="contenedorFooterArriba">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./personalizacion.html">Personalizacion</a></li>
+                <li><a href="./comparador.html">Comparador</a></li>
+                <li><a href="./formulario.html">Contacto</a></li>
+                <li><a href="./carrito.html">Carrito</a></li>
+            </ul>
+        </div>
+        <div class="contenedorFooterMedio contenedorFooterMedioArriba">
+            <p class="pTituloFooter pTituloFooterArriba">RELOJES</p>
+        </div>
+        <div class="contenedorFooterMedio contenedorFooterMedioAbajo">
+            <p class="pTituloFooter pTituloFooterAbajo">RELOJES</p>
+        </div>
+        <div class="contenedorFooterAbajo">
+            <p>© 2026 Marcos Guzman, Jesson Manuel, Ismael De Frutos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>

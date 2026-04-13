@@ -5,29 +5,65 @@
     font-family: Arial, sans-serif;
 }
 
+/* esto sirve para quitar los márgenes raros por defecto y que todo mida bien */
 html, body {
     height: 100%;
-    overflow: hidden;
+    margin: 0;
+    min-height: 100%;
 }
 
+/* uso flex para centrar todo y empiezo desde arriba con el contenido */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+
+    position: relative;
+    
+    /* Fondo que curbre */
+    background-image: url("../multimedia/Fondo_Personalizacion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Para que cuando se baje no se vena los fondos blancos. */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
 
     background-image: url("../multimedia/Fondo_Personalizacion.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+
+    z-index: -1;
 }
 
+/* este es el contenedor principal de toda la página */
 .contenedor {
     width: 90%;
     height: 90%;
-    position: relative;
+    position: relative; /* para poder posicionar cosas dentro con absolute */
+    flex: 1;
+    margin-top: 120px;
+    margin: 0 auto;
+    background: transparent;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+/* zona donde están los relojes */
 .seccion-reloj {
     width: 100%;
     height: 70%;
@@ -35,121 +71,221 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    margin-top: 60px; 
 }
 
+/* aquí está el reloj principal */
 .reloj {
     width: 460px;
     height: 460px;
     position: absolute;
+
     top: 45%;
     left: 50%;
+
+    /* transform sirve para mover el elemento desde su centro */
     transform: translate(-50%, -50%);
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    z-index: 3; /* lo pone por encima de todo */
 }
 
+/* imagen dentro del reloj */
 .reloj img {
-    width: 100%;
+    width: 90%;
     height: 100%;
-    object-fit: contain;
-    transform: scale(0.9);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    object-fit: contain; /* mantiene proporción sin deformar */
 }
 
+/* botones de flechas */
 .flecha {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+
+    transform: translateY(-50%); /* lo centra verticalmente */
+
     width: 65px;
     height: 65px;
-    border-radius: 50%;
+
+    border-radius: 50%; /* lo hace circular */
     border: none;
-    cursor: pointer;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(10px);
+
+    cursor: pointer; /* cambia el cursor al pasar */
+    background: rgba(255,255,255,0.25); 
+    /* rgba es rojo verde azul + transparencia (alpha) */
+
+    backdrop-filter: blur(10px); 
+    /* blur = efecto cristal desenfocado */
+
     font-size: 26px;
-    transition: 0.3s;
+    transition: 0.3s; /* hace animaciones suaves */
 }
 
+/* cuando pasas el ratón encima */
 .flecha:hover {
     background: rgba(255,255,255,0.6);
     transform: translateY(-50%) scale(1.1);
+    /* scale hace zoom sin mover la posición base */
 }
 
-.flecha-izquierda {
-    left: 10%;
+/* posiciones de flechas */
+.flecha-izquierda { left: 10%; }
+.flecha-derecha { right: 10%; }
+
+/* texto del centro */
+.texto-personaliza {
+    position: absolute;
+    bottom: 27%;
+    left: 50%;
+
+    transform: translateX(-50%);
+    /* lo centra horizontalmente perfecto */
+
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
 }
 
-.flecha-derecha {
-    right: 10%;
-}
-
+/* caja de accesorios abajo */
 .contenedor-accesorios {
     position: absolute;
-    bottom: 5%;
+    bottom: 12%;
     left: 50%;
+
     transform: translateX(-50%);
+    /* centra la caja horizontalmente */
+
     width: 85%;
-    padding: 25px;
+    padding: 20px;
+
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+
     background: rgba(255,255,255,0.25);
+    /* fondo transparente con blanco suave */
+
     backdrop-filter: blur(25px);
+    /* efecto cristal más fuerte */
+
     border-radius: 35px;
     z-index: 2;
 }
 
+/* cada accesorio */
 .accesorio {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 4px; /* separación entre elementos */
     width: 90px;
 }
 
+/* oculto checkbox porque no quiero que se vea */
 .accesorio input {
     display: none;
 }
 
+/* label controla todo el click */
 .accesorio label {
     cursor: pointer;
-    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
 }
 
+/* imagen del accesorio */
 .accesorio img {
-    width: 75px;
-    height: 75px;
+    width: 60px;
+    height: 60px;
     object-fit: cover;
-    border-radius: 12px;
+
+    border-radius: 10px;
+
+    transition: 0.3s; 
+}
+
+/* texto del accesorio */
+.accesorio p {
+    font-size: 14px;
+    color: white;
+}
+
+/* animación hover */
+.accesorio label:hover img {
+    transform: scale(1.1);
+    /* zoom suave al pasar el ratón */
+}
+
+/* círculo del tick */
+.tick {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+
+    border: 2px solid white;
+
     transition: 0.3s;
 }
 
-.accesorio p {
-    margin-top: 6px;
-    font-size: 14px;
-}
-
-.accesorio label:hover img {
-    transform: scale(1.15);
-}
-
-.tick {
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: transparent;
-    border: 2px solid white;
-}
-
+/* cuando selecciono cambia a rojo */
 .accesorio input:checked + label .tick {
-    background: #ff6b6b;
+    background: red;
     border: none;
 }
 
-.accesorio input:checked + label img {
-    transform: scale(1.2);
+/* precio debajo del accesorio */
+.precio-extra {
+    font-size: 12px;
+    color: #00ff99;
+    font-weight: bold;
+}
+
+/* botón del carrito */
+.contenedor-carrito {
+    position: absolute;
+    right: -2%;
+    bottom: 18%;
+    z-index: 10;
+}
+
+/* botón pagar */
+.boton-pagar {
+    background: white;
+    color: black;
+
+    padding: 15px 30px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+/* animación del botón */
+.boton-pagar:hover {
+    transform: scale(1.05);
+}
+
+/* esto evita que el menú bloquee clicks */
+.contenedorNavMenu,
+.degradadoIzquierda,
+.degradadoDerecha {
+    pointer-events: none;
+}
+
+/* enlaces del menú por encima de todo */
+.navMenu a {
+    pointer-events: auto;
+    position: relative;
+    z-index: 9999;
 }
