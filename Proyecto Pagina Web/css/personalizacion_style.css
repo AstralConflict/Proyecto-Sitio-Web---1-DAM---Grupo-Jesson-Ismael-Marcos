@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* FONDO */
+    background: url("../multimedia/FondoPersonal.jpg") no-repeat center/cover;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    width: 90%;
+    height: 90%;
+    position: relative;
+}
+
+/* RELOJ */
+.seccion-reloj {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.reloj {
+    width: 340px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    transition: opacity 0.3s ease;
+
+}
+
+/* FLECHAS */
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+
+    font-size: 26px;
+    transition: 0.3s;
+}
+
+.flecha:hover {
+    background: rgba(255,255,255,0.6);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.flecha-izquierda {
+    left: 10%;
+}
+
+.flecha-derecha {
+    right: 10%;
+}
+
+/* CAJA ACCESORIOS */
+.contenedor-accesorios {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 25px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(25px);
+
+    border-radius: 35px;
+    z-index: 2;
+
+    /* QUE SE META UN POCO SOBRE EL RELOJ */
+    margin-top: -80px;
+}
+
+/* ACCESORIOS */
+.accesorio {
+    text-align: center;
+}
+
+.accesorio input {
+    display: none;
+}
+
+.accesorio label {
+    cursor: pointer;
+    position: relative;
+}
+
+/* IMÁGENES */
+.accesorio img {
+    width: 75px;
+    transition: 0.3s;
+}
+
+.accesorio p {
+    margin-top: 6px;
+    font-size: 14px;
+}
+
+/* HOVER */
+.accesorio label:hover img {
+    transform: scale(1.15);
+}
+
+/* TICK */
+.tick {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid white;
+}
+
+/* SELECCIONADO */
+.accesorio input:checked + label .tick {
+    background: #ff6b6b;
+    border: none;
+}
+
+.accesorio input:checked + label img {
+    transform: scale(1.2);
+}

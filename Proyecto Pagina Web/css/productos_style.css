@@ -1,161 +1,207 @@
+/* Importo las fuentes desde Google Fonts para poder usarlas en la página */
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&family=Climate+Crisis:YEAR@1979&family=Contrail+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Reseteo estilos básicos del navegador para evitar márgenes y paddings raros */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Roboto, sans-serif;
+
+    /* Fuente principal para toda la página */
+    font-family: "Open Sans", sans-serif;
 }
 
+/* Estilo general del cuerpo de la página */
 body {
     height: 100vh;
     width: 100vw;
+    /* Evito scroll horizontal */
     overflow: hidden;
     background-color: #000;
+    /* Perspectiva para posibles efectos 3D */
     perspective: 1500px;
+    /* Dejo espacio arriba para que no choque con el header */
+    padding-top: 90px;
 }
 
+/* Fondo de la página */
 .fondo {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    /* Lo dejo detrás de todo */
     z-index: -1;
 }
 
+/* Imagen del fondo ajustada a toda la pantalla */
 .fondo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Estilo del menú superior */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+
+    /* Lo mantengo por encima de todo */
+    z-index: 9999;
+
+    /* Alineo elementos del menú */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Fondo oscuro transparente con efecto blur */
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+/* Estilo de cada tarjeta de reloj */
 .carta {
     position: absolute;
-    width: 280px; 
-    padding: 25px;
-    border-radius: 24px;
-    text-decoration: none;
-    color: white;
+    width: 200px;
+    padding: 18px;
+    border-radius: 20px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-decoration: none;
+    color: white;
+
+    /* Por encima del fondo */
     z-index: 10;
-   
-    background: rgba(255, 255, 255, 0.03); 
+
+    /* Fondo tipo cristal */
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    
-    transform: scale(1.05) translateY(-5px);
-    border: 1px solid rgba(255, 255, 255, 0.1); 
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 
-                0 0 15px rgba(255, 255, 255, 0.05);
-    
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
 }
 
-.carta::after {
-    content: "••";
-    position: absolute;
-    top: 12px;
-    right: 20px;
-    font-size: 14px;
-    letter-spacing: 2px;
-    opacity: 0.6;
-}
-
+/* Imagen dentro de cada carta */
 .carta img {
-    width: 160px; 
-    height: 160px;
+    width: 120px;
+    height: 120px;
+
     object-fit: contain;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6));
-    transition: all 0.5s ease;
+
+    margin-bottom: 10px;
 }
 
+/* Nombre del reloj */
 .carta span {
-    display: block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
-    letter-spacing: 1px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
-    transition: all 0.5s ease;
 }
 
-/*  POSICIONAMIENTO */
+/* Posicionamiento de las cartas en pantalla */
 .IzqArriba { 
-    top: 7%; 
-    left: 25%; 
-    transform: rotateY(30deg) rotateX(-10deg); 
-    transform-origin: right center; 
+    top: 18%; left: 18%; 
 }
 .IzqMedio { 
-    top: 35%; 
-    left: 6%;  
-    transform: rotateY(40deg); 
-    transform-origin: right center; 
+    top: 45%; left: 5%; 
 }
 .IzqBajo { 
-    top: 62%; 
-    left: 25%; 
-    transform: rotateY(30deg) rotateX(10deg); 
-    transform-origin: right center; 
+    top: 72%; left: 18%; 
 }
 
 .DerArriba { 
-    top: 7%; 
-    right: 25%; 
-    transform: rotateY(-30deg) rotateX(-10deg); 
-    transform-origin: left center; 
+    top: 18%; right: 18%; 
 }
 .DerMedio { 
-    top: 35%; 
-    right: 6%; 
-    transform: rotateY(-40deg); 
-    transform-origin: left center; 
+    top: 45%; right: 5%; 
 }
 .DerBajo { 
-    top: 64%; 
-    right: 25%; 
-    transform: rotateY(-30deg) rotateX(10deg); 
-    transform-origin: left center; 
+    top: 72%; right: 18%; 
 }
 
-
+/* Información extra que aparece al hacer hover */
 .info-extra {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
-    width: 80%;
-    opacity: 0; 
-    filter: blur(10px); 
-    transition: all 0.5s ease;
+    width: 90%;
+    opacity: 0;
+    font-size: 0.8rem;
+    color: white;
+    transition: all 0.4s ease;
+
+    /* Evito que se pueda clicar mientras está oculto */
     pointer-events: none;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.9);
 }
 
+/* Efecto al pasar el ratón por encima de la carta */
 .carta:hover {
-    transform: scale(1.1) rotateY(0deg) rotateX(0deg) !important;
+    transform: scale(1.05);
+
     z-index: 100;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
-    background: rgba(255, 255, 255, 0.12); 
+
+    background: rgba(255, 255, 255, 0.1);
 }
 
+/* Efecto en la imagen al hacer hover */
 .carta:hover img {
-    opacity: 0.05;
-    transform: scale(0.6) translateY(-20px);
-    filter: blur(8px);
+    opacity: 0.1;
+    transform: scale(0.7);
 }
 
+/* Muestra la información extra al hacer hover */
 .carta:hover .info-extra {
     opacity: 1;
-    filter: blur(0px);
     transform: translate(-50%, -50%) scale(1);
 }
 
+/* Mueve ligeramente el nombre al hacer hover */
 .carta:hover span {
-    transform: translateY(-10px);
-    color: #fff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    transform: translateY(-5px);
+}
+
+/* Contenedor del texto central */
+.texto-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 50;
+    color: white;
+}
+
+/* Título principal grande */
+.texto-centro h1 {
+    font-family: "Contrail One", sans-serif;
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+/* Parte destacada del título */
+.texto-centro h1 span {
+    display: block;
+    font-family: "Contrail One", sans-serif;
+    font-size: 4.5rem;
+    margin-top: 10px;
+    letter-spacing: 5px;
+}
+
+/* Texto inferior */
+.texto-centro p {
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.8;
+    letter-spacing: 1px;
 }
