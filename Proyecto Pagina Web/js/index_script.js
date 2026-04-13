@@ -1,8 +1,8 @@
 const seccionPrincipal = document.getElementById("seccionPrincipal");
 const imagen = document.querySelector("#seccionPrincipal .imagenFondo");
-const carta = document.querySelector("#seccionPrincipal .carta");
+const cartaReloj = document.querySelector("#seccionPrincipal .cartaReloj");
 
-const puntoImagen = { x: 390, y: 700 };
+const puntoImagen = { x: 390, y: 660 };
 
 function modificarPosicion() {
   
@@ -30,11 +30,11 @@ function modificarPosicion() {
   const posicionFinalY = desplazamientoImagenY + puntoImagen.y * escalaImagen;
 
   // Finalmente posicionamos la carta en la posicion que hemos calculado.
-  carta.style.left = `${posicionFinalX}px`;
-  carta.style.top = `${posicionFinalY}px`;
+  cartaReloj.style.left = `${posicionFinalX}px`;
+  cartaReloj.style.top = `${posicionFinalY}px`;
 
   // Centramos la carta en el punto al que la hemos movido.
-  carta.style.transform = "translate(-50%, -50%)";
+  cartaReloj.style.transform = "translate(-50%, -50%)";
 }
 
 // Posicionar la carta al cargar la imagen.
