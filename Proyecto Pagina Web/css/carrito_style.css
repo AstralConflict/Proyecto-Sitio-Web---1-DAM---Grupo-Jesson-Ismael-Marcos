@@ -19,7 +19,7 @@ header {
 }
 
 main {
-    height: 100vh;
+    height: 120vh;
     /*background-color: #f0f8ff;*/
     background-color: #f6f7f8;
     display: flex;
@@ -28,12 +28,14 @@ main {
 }
 
 .seccionTitulo {
-    width: 1640px;
+    width: 100%;
+    max-width: 1640px;
     height: 20vh;
     display: flex;
     justify-content: end;
     align-items: right;
     flex-direction: column;
+    padding-left: 40px;
 }
 
 .tituloCarrito {
@@ -52,12 +54,15 @@ main {
 }
 
 .seccionCesta {
-    width: 1640px;
+    width: 100%;
+    max-width: 1640px;
     height: 80vh;
     display: flex;
     justify-content: left;
     align-items: top;
     padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 .contenedorResumen {
@@ -129,8 +134,8 @@ main {
 .contenedorProductos {
     width: fit-content;
     height: fit-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: left;
     align-items: top;
     padding: 20px;
@@ -140,10 +145,10 @@ main {
     gap: 10px;
 }
 
-.carta {
-    background-color: rgb(29, 29, 29);
+.cartaReloj {
     position: relative;
-    width: 210px;
+    rotate: 0deg;
+    min-width: 260px;
 }
 
 .contenedorOfertaEnvio {

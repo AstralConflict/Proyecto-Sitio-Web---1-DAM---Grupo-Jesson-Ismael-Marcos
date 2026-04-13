@@ -255,6 +255,11 @@ body {
 
 }
 
+.botonSeccionPrincipal a {
+    text-decoration: none;
+    color: white;
+}
+
 #bentoGrid {
     width: 100%;
     height: 85vh;
@@ -293,11 +298,12 @@ body {
 
 .cartaBento1 {
     grid-area: cartaBento1;
+    background-image: url(../multimedia/RelojFondoMar.png);
 }
 
 .cartaBento2 {
     grid-area: cartaBento2;
-    background-image: url(../multimedia/RelojesBentoGridPrueba1.png);
+    background-image: url(../multimedia/RelojesExpositorioTriple.png);
 }
 
 .cartaBento3 {
@@ -316,7 +322,7 @@ body {
 
 .cartaBento6 {
     grid-area: cartaBento6;
-    background-image: url(../multimedia/RelojBentoGridPruebaFondoMontañas.png);
+    background-image: url(../multimedia/RelojFondoMontañas.png);
 }
 
 .contenedorExpositorReloj {
@@ -334,6 +340,10 @@ body {
     position: sticky;
     top: 0;
     overflow: hidden;
+}
+
+.expositorReloj2 {
+    background-image: url(../multimedia/FondoRelojSiraise.png);
 }
 
 .expositorReloj3 {
@@ -445,7 +455,7 @@ body {
 }
 
 .pConBorde-invertido {
-    margin-left: -270px;
+    margin-left: -200px;
 } 
 
 .pBordeCentro {
@@ -464,7 +474,9 @@ body {
     font-weight: 500;
     letter-spacing: 1.5px;
     height: 35px;
-    width: 120px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: fit-content;
     background-color: transparent;
     border: solid 1px rgba(255, 255, 255, 0.24);
     color: rgba(255, 255, 255, 0.822);

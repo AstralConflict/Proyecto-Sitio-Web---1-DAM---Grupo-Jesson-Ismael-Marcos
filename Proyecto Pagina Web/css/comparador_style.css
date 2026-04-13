@@ -7,8 +7,8 @@
 
 body {
     margin: 0;
-    height: 100vh;
-    background-image: url("../../Recursos Proyecto/Imagenes/fondo_Comparador.jpg");
+    height: 110vh;
+    background-image: url("../multimedia/fondo_Comparador.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -39,6 +39,7 @@ main {
     justify-content: center;
     align-items: flex-start;
     margin: 100px;
+    animation: blur-in-expand 0.7s linear both;
 }
 
 .contenedorIzquierdo, .contenedorDerecho {
@@ -83,4 +84,45 @@ select {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: blur-in-expand 0.7s linear both;
 }
+
+.contenedorDescripciones {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+    width: 50%;
+    animation: blur-in-expand 0.7s linear both;
+}
+
+.descripcion {
+    width: 40%;
+    padding: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.descripcion p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+@keyframes blur-in-expand {
+  0% {
+    transform: scale(0.8);
+    filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
