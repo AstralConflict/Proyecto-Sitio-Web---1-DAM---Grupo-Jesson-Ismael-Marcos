@@ -4,65 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+
     <link rel="stylesheet" href="../css/productos_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <script src="../js/productos_script.js"></script>
 </head>
+
 <body>
-    <!-- Fondo -->
-    <div class="fondo">
-        <img src="../../Recursos Proyecto/Imagenes/RolexFondo.jpg" alt="">
-    </div>
-    <!-- Cartas a la izquierda -->
-    <a href="#" class="carta IzqArriba">
-        <img src="../../Recursos Proyecto/Imagenes/RolexDateJust.png" alt="Rolex Datejust">
-        <div class="info-extra">
-        <p></p>
-    </div>
-        <span>Rolex DateJust</span>
-    </a>
-    <a href="#" class="carta IzqMedio">
-        <img src="../../Recursos Proyecto/Imagenes/OmegaSeamaster.png" alt="Omega Seamaster">
-        <div class="info-extra">
-        <p></p>
-    </div>
-        <span>Omega SeaMaster</span>
-    </a>
 
-    <a href="#" class="carta IzqBajo">
-        <img src="../../Recursos Proyecto/Imagenes/PetekPhilippeNautilus.png" alt="Patek Philippe Nautilus">
-        <div class="info-extra">
-        <p></p>
+<!-- MENÚ -->
+<header>
+    <div id="menuLogo">
+        <div id="cajitaLogo"></div>
     </div>
-        <span>Patek Philippe Nautilus</span>
-    </a>
-    <!-- Cartas a la derecha -->
-    <a href="#" class="carta DerArriba">
-        <img src="../../Recursos Proyecto/Imagenes/AudemarsPiguet.png" alt="Audemars Piguet Royal Oak">
-        <div class="info-extra">
-        <p>Cristal de Zafiro</p>
-        <p>Resistente 50m</p>
-        <p>Movimiento Suizo</p>
-    </div>
-        <span>Audemars Piguet Royal </span>
-    </a>
 
-    <a href="#" class="carta DerMedio">
-        <img src="../../Recursos Proyecto/Imagenes/TagHeuer.jpg" alt="Tag Heuer Carrera">
-        <div class="info-extra">
-        <p>Cristal de Zafiro</p>
-        <p>Resistente 50m</p>
-        <p>Movimiento Suizo</p>
+    <div id="menuNavegacion">
+        <nav id="navMenu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="../html/productos.html">Productos</a></li>
+                <li><a href="../html/personalizacion.html">Personalización</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
     </div>
-        <span>Tag Heuer</span>
-    </a>
 
-    <a href="#" class="carta DerBajo">
-        <img src="../../Recursos Proyecto/Imagenes/JaguarSaphire.png" alt="Jaguar Saphire">
-        <div class="info-extra">
-        <p>Cristal de Zafiro</p>
-        <p>Resistente 50m</p>
-        <p>Movimiento Suizo</p>
+    <div id="menuBotones">
+        <button class="botonInicio">
+            <img src="../multimedia/IconoCarrito.png" alt="Carrito">
+        </button>
+        <button class="botonInicio">
+            <img src="../multimedia/IconoContacto.png" alt="Contacto">
+        </button>
     </div>
-        <span>Jaguar Saphire</span>
-    </a>
+</header>
+
+<!-- TEXTO CENTRAL -->
+<div class="texto-centro">
+    <h1>
+        EL TIEMPO<br>
+        NO SE MIDE<br>
+        <span>SE CONQUISTA</span>
+    </h1>
+    <p>Descubre la elegancia que define cada segundo.</p>
+</div>
+
+<!-- FONDO -->
+<div class="fondo">
+    <img src="../multimedia/fondo_productos.jpg" alt="">
+</div>
+
+<!-- CARTAS -->
+<a href="#" class="carta IzqArriba" data-indice="0">
+    <img src="../multimedia/RolexDateJust.png">
+    <div class="info-extra"></div>
+    <span></span>
+</a>
+
+<a href="#" class="carta IzqMedio" data-indice="1">
+    <img src="../multimedia/OmegaSeamaster.png">
+    <div class="info-extra"></div>
+    <span></span>
+</a>
+
+<a href="#" class="carta IzqBajo" data-indice="2">
+    <img src="../multimedia/PetekPhilippeNautilus.png">
+    <div class="info-extra"></div>
+    <span></span>
+</a>
+
+<a href="#" class="carta DerArriba" data-indice="3">
+    <img src="../multimedia/AudemarsPiguet.png">
+    <div class="info-extra"></div>
+    <span></span>
+</a>
+
+<a href="#" class="carta DerMedio" data-indice="4">
+    <img src="../multimedia/TagHeuer.jpg">
+    <div class="info-extra"></div>
+    <span></span>
+</a>
+
+<a href="#" class="carta DerBajo" data-indice="5">
+    <img src="../multimedia/JaguarSaphire.png">
+    <div class="info-extra"></div>
+    <span></span>
+</a>
 </body>
 </html>
