@@ -16,7 +16,7 @@ main {
 
 body {
     font-family: 'Libre Caslon Text', sans-serif;
-    background-image: url("../../Recursos Proyecto/Imagenes/Fondo_formulario.png");
+    background-image: url("../multimedia/Fondo_formulario.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
