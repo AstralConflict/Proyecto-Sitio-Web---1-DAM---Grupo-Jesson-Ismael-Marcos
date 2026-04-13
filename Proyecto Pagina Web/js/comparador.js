@@ -5,6 +5,8 @@ const imgDerecho        = document.getElementById("imgDerecho");
 const precioIzquierdo   = document.getElementById("precioIzquierdo");
 const precioDerecho     = document.getElementById("precioDerecho");
 const resultado         = document.getElementById("resultado");
+const descripcionIzquierda = document.getElementById("descripcion-izquierda");
+const descripcionDerecha = document.getElementById("descripcion-derecha");
  
 const imagenes = {
     opcion1: "../multimedia/RolexDateJust.png",
@@ -34,6 +36,21 @@ const precios = {
     opcion10: { nombre: "Hublot Classic",           precio: 10000 },
     opcion11: { nombre: "Breitling Navitimer",      precio: 7000   },
     opcion12: { nombre: "Cartier Santos",           precio: 8300   }
+};
+
+const descripciones = {
+    opcion1: "El Rolex DateJust es un icono de elegancia y precisión, reconocido por su diseño clásico y su fiabilidad.",
+    opcion2: "El Audemars Piguet Royal Oak destaca por su bisel octogonal y su diseño deportivo de lujo.",
+    opcion3: "El Omega Seamaster es famoso por su resistencia al agua y su vínculo con el mundo del buceo.",
+    opcion4: "El Patek Philippe Nautilus es una obra maestra de la alta relojería con un diseño sofisticado y exclusivo.",
+    opcion5: "Tag Heuer combina innovación y deportividad, siendo una marca ligada al automovilismo.",
+    opcion6: "El Jaguar Saphire ofrece elegancia y precisión a un precio accesible.",
+    opcion7: "El Rolex Submariner es el reloj de buceo por excelencia, robusto y atemporal.",
+    opcion8: "El IWC Pilot está inspirado en la aviación y destaca por su legibilidad y precisión.",
+    opcion9: "El Zenith Elite es sinónimo de sofisticación y tradición relojera suiza.",
+    opcion10: "El Hublot Classic Fusion fusiona materiales modernos con un diseño elegante y contemporáneo.",
+    opcion11: "El Breitling Navitimer es un referente en la aviación gracias a su icónica regla de cálculo.",
+    opcion12: "El Cartier Santos es uno de los primeros relojes de pulsera, símbolo de lujo y distinción."
 };
  
 function actualizarComparacion() {
@@ -69,6 +86,16 @@ function actualizarComparacion() {
                 "Ambos relojes tienen el mismo precio de <strong>" + relojIzq.precio + " €</strong>.";
         }
     }
+
+    // Actualizar descripciones
+    if (descripciones[valorIzq] && descripcionIzquierda) {
+        descripcionIzquierda.textContent = descripciones[valorIzq];
+    }
+
+    if (descripciones[valorDer] && descripcionDerecha) {
+        descripcionDerecha.textContent = descripciones[valorDer];
+    }
+
 }
  
 selectorIzquierdo.addEventListener("change", () => {
