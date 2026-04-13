@@ -3,15 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <title>Comparador</title>
-     <link rel="stylesheet" href="../css/comparador_style.css">
-     <script src="../js/comparador.js" defer></script>
+    <link rel="stylesheet" href="../css/comparador_style.css">
+    <link rel="stylesheet" href="../css/header_style.css">
+    <link rel="stylesheet" href="../css/footer_style.css">
+    <script src="../js/comparador.js" defer></script>
 </head>
 <body>
+    <header>
+        <div class="menuLogo">
+            <div class="cajitaLogo"></div>
+        </div>
+        <div class="menuNavegacion">
+            <div class="degradadoIzquierda"></div>
+            <div class="contenedorNavMenu">
+                <nav class="navMenu">
+                    <ul>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./personalizacion.html">Personalizacion</a></li>
+                        <li><a href="./comparador.html">Comparador</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="degradadoDerecha"></div>
+        </div>
+        <div class="menuBotones">
+            <div class="cajitaBotones">
+                <a href="./carrito.html" class="botonMenu">
+                    <img src="../multimedia/IconoCarrito.png" alt="Icono de carrito">
+                </a>
+                <a href="./formulario.html" class="botonMenu">
+                    <img src="../multimedia/IconoContacto.png" alt="Icono de contacto">
+                </a>
+            </div>
+        </div>
+    </header>
 
-    <h1 class="titulo" >Comparador de Relojes</h1>
+    <main>
+        <h1 class="titulo" >Comparador de Relojes</h1>
 
-    <!-- Contenedor principal -->
-    <div class="contenedorPrincipal">
+        <!-- Contenedor principal -->
+        <div class="contenedorPrincipal">
         
         <!-- Div izquierdo -->
         <div class="contenedorIzquierdo">
@@ -47,11 +79,33 @@
             </select>
         </div>
 
-    </div>
+        </div>
 
-    <div class="resultado" id="resultado">
-        Selecciona dos relojes para compararlos.
-    </div>
+        <div class="resultado" id="resultado">
+            Selecciona dos relojes para compararlos.
+        </div>
+    </main>
 
+    <footer>
+        <div class="contenedorFooterArriba">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./productos.html">Productos</a></li>
+                <li><a href="./personalizacion.html">Personalizacion</a></li>
+                <li><a href="./comparador.html">Comparador</a></li>
+                <li><a href="./formulario.html">Contacto</a></li>
+                <li><a href="./carrito.html">Carrito</a></li>
+            </ul>
+        </div>
+        <div class="contenedorFooterMedio contenedorFooterMedioArriba">
+            <p class="pTituloFooter pTituloFooterArriba">RELOJES</p>
+        </div>
+        <div class="contenedorFooterMedio contenedorFooterMedioAbajo">
+            <p class="pTituloFooter pTituloFooterAbajo">RELOJES</p>
+        </div>
+        <div class="contenedorFooterAbajo">
+            <p>© 2026 Marcos Guzman, Jesson Manuel, Ismael De Frutos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
