@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/productos_style.css">
     <link rel="stylesheet" href="../css/header_style.css">
     <link rel="stylesheet" href="../css/footer_style.css">
-    <script src="../js/productos_script.js"></script>
+    <script src="../js/productos_script.js" defer></script>
 </head>
 
 <body>
@@ -51,77 +51,94 @@
     </div>
 </header>
 
-<!-- TEXTO CENTRAL -->
-<div class="texto-centro">
-    <h1>
-        EL TIEMPO<br>
-        NO SE MIDE<br>
-        <span>SE CONQUISTA</span>
-    </h1>
-    <p>Descubre la elegancia que define cada segundo.</p>
-</div>
 
-<!-- FONDO -->
-<div class="fondo">
-    <img src="../multimedia/fondo_productos.jpg" alt="">
-</div>
+<main class="pagina">
 
-<!-- CARTAS -->
-<a href="#" class="carta IzqArriba" data-indice="0">
-    <img src="../multimedia/RolexDateJust.png">
-    <div class="info-extra"></div>
-    <span></span>
-</a>
 
-<a href="#" class="carta IzqMedio" data-indice="1">
-    <img src="../multimedia/OmegaSeamaster.png">
-    <div class="info-extra"></div>
-    <span></span>
-</a>
+    <section class="relojes">
 
-<a href="#" class="carta IzqBajo" data-indice="2">
-    <img src="../multimedia/PetekPhilippeNautilus.png">
-    <div class="info-extra"></div>
-    <span></span>
-</a>
-
-<a href="#" class="carta DerArriba" data-indice="3">
-    <img src="../multimedia/AudemarsPiguet.png">
-    <div class="info-extra"></div>
-    <span></span>
-</a>
-
-<a href="#" class="carta DerMedio" data-indice="4">
-    <img src="../multimedia/TagHeuer.jpg">
-    <div class="info-extra"></div>
-    <span></span>
-</a>
-
-<a href="#" class="carta DerBajo" data-indice="5">
-    <img src="../multimedia/JaguarSaphire.png">
-    <div class="info-extra"></div>
-    <span></span>
-</a>
-   <footer>
-        <div class="contenedorFooterArriba">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./personalizacion.html">Personalizacion</a></li>
-                <li><a href="./comparador.html">Comparador</a></li>
-                <li><a href="./formulario.html">Contacto</a></li>
-                <li><a href="./carrito.html">Carrito</a></li>
-            </ul>
+        <!-- FONDO -->
+        <div class="fondo">
+            <img src="../multimedia/fondo_productos.jpg" alt="">
         </div>
-        <div class="contenedorFooterMedio contenedorFooterMedioArriba">
-            <p class="pTituloFooter pTituloFooterArriba">RELOJES</p>
+
+        <!-- TEXTO CENTRAL -->
+        <div class="texto-centro">
+            <h1>
+                EL TIEMPO<br>
+                NO SE MIDE<br>
+                <span>SE CONQUISTA</span>
+            </h1>
+            <p>Descubre la elegancia que define cada segundo.</p>
         </div>
-        <div class="contenedorFooterMedio contenedorFooterMedioAbajo">
-            <p class="pTituloFooter pTituloFooterAbajo">RELOJES</p>
-        </div>
-        <div class="contenedorFooterAbajo">
-            <p>© 2026 Marcos Guzman, Jesson Manuel, Ismael De Frutos. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+
+        <!-- CARTAS (RELOJES) -->
+        <a href="#" class="carta IzqArriba" data-indice="0">
+            <img src="../multimedia/RolexDateJust.png">
+            <div class="info-extra"></div>
+            <span></span>
+        </a>
+
+        <a href="#" class="carta IzqMedio" data-indice="1">
+            <img src="../multimedia/OmegaSeamaster.png">
+            <div class="info-extra"></div>
+            <span></span>
+        </a>
+
+        <a href="#" class="carta IzqBajo" data-indice="2">
+            <img src="../multimedia/PetekPhilippeNautilus.png">
+            <div class="info-extra"></div>
+            <span></span>
+        </a>
+
+        <a href="#" class="carta DerArriba" data-indice="3">
+            <img src="../multimedia/AudemarsPiguet.png">
+            <div class="info-extra"></div>
+            <span></span>
+        </a>
+
+        <a href="#" class="carta DerMedio" data-indice="4">
+            <img src="../multimedia/TagHeuer.jpg">
+            <div class="info-extra"></div>
+            <span></span>
+        </a>
+
+        <a href="#" class="carta DerBajo" data-indice="5">
+            <img src="../multimedia/JaguarSaphire.png">
+            <div class="info-extra"></div>
+            <span></span>
+        </a>
+
+    </section>
+
+    <section class="scroll-trigger"></section>
+
+</main>
+
+<footer>
+    <div class="contenedorFooterArriba">
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./personalizacion.html">Personalizacion</a></li>
+            <li><a href="./comparador.html">Comparador</a></li>
+            <li><a href="./formulario.html">Contacto</a></li>
+            <li><a href="./carrito.html">Carrito</a></li>
+        </ul>
+    </div>
+
+    <div class="contenedorFooterMedio contenedorFooterMedioArriba">
+        <p class="pTituloFooter pTituloFooterArriba">RELOJES</p>
+    </div>
+
+    <div class="contenedorFooterMedio contenedorFooterMedioAbajo">
+        <p class="pTituloFooter pTituloFooterAbajo">RELOJES</p>
+    </div>
+
+    <div class="contenedorFooterAbajo">
+        <p>© 2026 Marcos Guzman, Jesson Manuel, Ismael De Frutos. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>

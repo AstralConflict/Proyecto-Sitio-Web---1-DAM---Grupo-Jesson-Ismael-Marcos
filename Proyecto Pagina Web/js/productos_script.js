@@ -1,3 +1,5 @@
+document.body.style.overflow = "hidden";
+ 
 const relojes = [
   {
     imagen: "../multimedia/RolexDateJust.png",
@@ -155,27 +157,98 @@ function mostrarRelojes(pagina) {
   });
 }
 
-// Control del scroll del ratón
+// indica si estamos en la zona de relojes (true) o no (false)
+let enRelojes = true;
+
+// página actual de relojes (cada página = 6 relojes)
 let paginaActual = 0;
 
-// Calcula cuántas páginas hay en total
+// bloquea el scroll para que no se ejecute muchas veces seguidas
+let bloqueado = false;
+
+// número máximo de páginas de relojes que existen
 const maxPaginas = Math.floor(relojes.length / 6) - 1;
 
-// Detecta cuando el usuario hace scroll
+// función que muestra los relojes según la página actual
+function mostrarRelojes(pagina) {
+
+  // selecciona todas las cartas (los bloques de relojes en el HTML)
+  document.querySelectorAll(".carta").forEach(carta => {
+
+    // obtiene el índice de cada carta (0 a 5)
+    const indice = carta.dataset.indice;
+
+    // calcula qué reloj toca según la página y el índice
+    const reloj = relojes[pagina * 6 + Number(indice)];
+
+    // si no existe ese reloj, no hace nada
+    if (!reloj) return;
+
+    // cambia la imagen del reloj
+    carta.querySelector("img").src = reloj.imagen;
+
+    // cambia el nombre del reloj
+    carta.querySelector("span").textContent = reloj.nombre;
+
+    // mete la descripción en el bloque info-extra
+    const info = carta.querySelector(".info-extra");
+    info.innerHTML = reloj.descripcion.map(d => `<p>— ${d}</p>`).join("");
+  });
+}
+
+// muestra la primera página al cargar
+mostrarRelojes(0);
+
+// bloquea el scroll normal de la página
+document.body.style.overflow = "hidden";
+
+// detecta el scroll del ratón
 window.addEventListener("wheel", (e) => {
 
-  // Scroll hacia abajo -> siguiente página
-  if (e.deltaY > 0 && paginaActual < maxPaginas) {
-    paginaActual++;
-    mostrarRelojes(paginaActual);
+  // evita el scroll nativo del navegador
+  e.preventDefault();
+
+  // si está bloqueado, no hace nada (evita spam de scroll)
+  if (bloqueado) return;
+
+  // activa el bloqueo temporal
+  bloqueado = true;
+  setTimeout(() => bloqueado = false, 600);
+
+  // ======================
+  // SCROLL HACIA ABAJO
+  // ======================
+  if (e.deltaY > 0) {
+
+    // si aún hay páginas de relojes, avanza
+    if (paginaActual < maxPaginas) {
+      paginaActual++;
+      mostrarRelojes(paginaActual);
+    }
+
+    // si ya no hay más relojes, va al footer
+    else {
+
+      // desbloquea el scroll normal de la página
+      document.body.style.overflow = "auto";
+
+      // baja suavemente al footer
+      document.querySelector("footer").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
   }
 
-  // Scroll hacia arriba -> página anterior
-  if (e.deltaY < 0 && paginaActual > 0) {
-    paginaActual--;
-    mostrarRelojes(paginaActual); 
-  }
-});
+  // ======================
+  // SCROLL HACIA ARRIBA
+  // ======================
+  if (e.deltaY < 0) {
 
-// Carga inicial (primera página de relojes)
-mostrarRelojes(0);
+    // si no estás en la primera página, sube relojes
+    if (paginaActual > 0) {
+      paginaActual--;
+      mostrarRelojes(paginaActual);
+    }
+  }
+
+}, { passive: false });

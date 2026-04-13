@@ -12,16 +12,27 @@
 }
 
 /* Estilo general del cuerpo de la página */
-body {
-    height: 100vh;
-    width: 100vw;
-    /* Evito scroll horizontal */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    overflow-x: hidden;
+}
+.pagina {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+.relojes {
+    height: 100vh; 
+    position: relative;
     overflow: hidden;
-    background-color: #000;
-    /* Perspectiva para posibles efectos 3D */
-    perspective: 1500px;
-    /* Dejo espacio arriba para que no choque con el header */
-    padding-top: 90px;
+}
+
+/* Crear doble scroll */
+.scroll-trigger {
+    height: 0px;
 }
 
 /* Fondo de la página */
