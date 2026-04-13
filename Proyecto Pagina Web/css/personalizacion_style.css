@@ -5,24 +5,29 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
 body {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* FONDO */
-    background: url("../multimedia/FondoPersonal.jpg") no-repeat center/cover;
+    background-image: url("../multimedia/Fondo_Personalizacion.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
-/* CONTENEDOR */
 .contenedor {
     width: 90%;
     height: 90%;
     position: relative;
 }
 
-/* RELOJ */
 .seccion-reloj {
     width: 100%;
     height: 70%;
@@ -33,17 +38,26 @@ body {
 }
 
 .reloj {
-    width: 340px;
+    width: 460px;
+    height: 460px;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    transition: opacity 0.3s ease;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* FLECHAS */
+.reloj img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .flecha {
     position: absolute;
     top: 50%;
@@ -53,10 +67,8 @@ body {
     border-radius: 50%;
     border: none;
     cursor: pointer;
-
     background: rgba(255,255,255,0.25);
     backdrop-filter: blur(10px);
-
     font-size: 26px;
     transition: 0.3s;
 }
@@ -74,7 +86,6 @@ body {
     right: 10%;
 }
 
-/* CAJA ACCESORIOS */
 .contenedor-accesorios {
     position: absolute;
     bottom: 5%;
@@ -82,24 +93,18 @@ body {
     transform: translateX(-50%);
     width: 85%;
     padding: 25px;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
-
     background: rgba(255,255,255,0.25);
     backdrop-filter: blur(25px);
-
     border-radius: 35px;
     z-index: 2;
-
-    /* QUE SE META UN POCO SOBRE EL RELOJ */
-    margin-top: -80px;
 }
 
-/* ACCESORIOS */
 .accesorio {
     text-align: center;
+    width: 90px;
 }
 
 .accesorio input {
@@ -111,9 +116,11 @@ body {
     position: relative;
 }
 
-/* IMÁGENES */
 .accesorio img {
     width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 12px;
     transition: 0.3s;
 }
 
@@ -122,12 +129,10 @@ body {
     font-size: 14px;
 }
 
-/* HOVER */
 .accesorio label:hover img {
     transform: scale(1.15);
 }
 
-/* TICK */
 .tick {
     position: absolute;
     top: -12px;
@@ -140,7 +145,6 @@ body {
     border: 2px solid white;
 }
 
-/* SELECCIONADO */
 .accesorio input:checked + label .tick {
     background: #ff6b6b;
     border: none;

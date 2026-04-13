@@ -1,29 +1,20 @@
 header {
-    height: 70px;
+    height: 60px;
     width: 100%;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 999;
-
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid 1px white;
+    position: absolute;
+    z-index: 2;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: center;
-
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    grid-template-columns: 20% 60% 20%;
+    position: fixed;
+    z-index: 3;
 }
 
-/* =========================
-   LOGO
-========================= */
 #menuLogo {
     height: 100%;
     width: 100%;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,55 +29,14 @@ header {
     background-position: center;
 }
 
-/* =========================
-   NAVEGACIÓN
-========================= */
-#menuNavegacion {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#navMenu ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-}
-
-#navMenu a {
-    text-decoration: none;
-    color: white;
-    font-family: 'Clash Display', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    transition: 0.3s ease;
-}
-
-#navMenu a:hover {
-    opacity: 0.7;
-}
-
-/* =========================
-   BOTONES
-========================= */
-#menuBotones {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
 #cajitaBotones {
     height: 90%;
-    width: 120px;
+    width: 100px;
     background-image: url("../multimedia/FondoCajaBotones.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
+    margin-bottom: -5px; /* Un pequeño ajuste de la posicion para que quede mas abajo. */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,9 +49,66 @@ header {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 
 .botonMenu img {
     height: 100%;
     width: 100%;
+}
+
+#menuNavegacion {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+
+#menuBotones {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#degradadoIzquierda {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Color degradado o "gradiente" (usando cssgradient.io) */
+}
+
+#degradadoDerecha {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#contenedorNavMenu {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navMenu ul {
+    display: flex;
+    list-style: none;
+    gap: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
 }
