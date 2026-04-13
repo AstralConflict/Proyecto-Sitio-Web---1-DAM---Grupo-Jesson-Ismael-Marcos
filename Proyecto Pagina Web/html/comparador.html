@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparador</title>
+     <link rel="stylesheet" href="../css/comparador.css">
+     <script src="../js/comparador.js" defer></script>
+</head>
+<body>
+
+    <h1 class="titulo" >Comparador de Relojes</h1>
+
+    <!-- Contenedor principal -->
+    <div class="contenedorPrincipal">
+        
+        <!-- Div izquierdo -->
+        <div class="contenedorIzquierdo">
+            <h3>Opción 1</h3>
+            <img id="imgIzquierdo" src="../../Recursos Proyecto/Imagenes/RolexDateJust.png" alt="Imagen izquierda">
+            <br><br>
+            <label for="selector-izquierdo">Selecciona una opción:</label>
+            <select id="selector-izquierdo" name="selector-izquierdo">
+                <option value="opcion1">Rolex DateJust</option>
+                <option value="opcion2">Audemars Piguet Royal</option>
+                <option value="opcion3">Omega SeaMaster</option>
+                <option value="opcion4">Patek Philippe Nautilus</option>
+                <option value="opcion5">Tag Heuer</option>
+                <option value="opcion6">Jaguar Saphire</option>
+            </select>
+        </div>
+
+        <hr>
+
+        <!-- Div derecho -->
+        <div class="contenedorDerecho">
+            <h3>Opción 2</h3>
+            <img id="imgDerecho" src="../../Recursos Proyecto/Imagenes/RolexDateJust.png" alt="Imagen derecha">
+            <br><br>
+            <label for="selector-derecho">Selecciona una opción:</label>
+            <select id="selector-derecho" name="selector-derecho">
+                <option value="opcion1">Rolex DateJust</option>
+                <option value="opcion2">Audemars Piguet Royal</option>
+                <option value="opcion3">Omega SeaMaster</option>
+                <option value="opcion4">Patek Philippe Nautilus</option>
+                <option value="opcion5">Tag Heuer</option>
+                <option value="opcion6">Jaguar Saphire</option>
+            </select>
+        </div>
+
+    </div>
+
+    <div class="resultado" id="resultado">
+        Selecciona dos relojes para compararlos.
+    </div>
+
+</body>
+</html>

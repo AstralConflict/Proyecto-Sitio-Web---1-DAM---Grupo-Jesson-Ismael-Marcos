@@ -1,0 +1,78 @@
+* {
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../Recursos Proyecto/Imagenes/fondo_Comparador.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.titulo {
+    color: white;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.contenedorPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 100px;
+}
+
+.contenedorIzquierdo, .contenedorDerecho {
+    color: white;
+    width: 40%;
+    height: 500px;
+    padding: 100px;
+    background: rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0px;
+}
+
+select {
+    padding: 10px;
+}
+
+.contenedorIzquierdo, .contenedorDerecho label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 15px 25px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
