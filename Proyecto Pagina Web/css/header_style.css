@@ -1,0 +1,114 @@
+header {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    border-bottom: solid 1px white;
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    position: fixed;
+    z-index: 3;
+}
+
+#menuLogo {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cajitaLogo {
+    height: 90%;
+    width: 100px;
+    background-image: url("../multimedia/LogoProvisional.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cajitaBotones {
+    height: 90%;
+    width: 100px;
+    background-image: url("../multimedia/FondoCajaBotones.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: -5px; /* Un pequeño ajuste de la posicion para que quede mas abajo. */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.botonMenu {
+    height: 30px;
+    width: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.botonMenu img {
+    height: 100%;
+    width: 100%;
+}
+
+#menuNavegacion {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+
+#menuBotones {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#degradadoIzquierda {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); /* Color degradado o "gradiente" (usando cssgradient.io) */
+}
+
+#degradadoDerecha {
+    background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#contenedorNavMenu {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
+#navMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navMenu ul {
+    display: flex;
+    list-style: none;
+    gap: 20%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#navMenu a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Clash Display', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+}
