@@ -1,9 +1,18 @@
 window.onload = function() {
 
     const relojes = [
-        "../multimedia/RelojRolexPersonalizacion1.png",
-        "../multimedia/RelojOmegaPersonalizacion.png",
-        "../multimedia/RelojNadalPersonalizacion.png"
+        "../multimedia/RolexDateJust.png",
+        "../multimedia/OmegaSeamaster.png",
+        "../multimedia/PetekPhilippeNautilus.png",
+        "../multimedia/AudemarsPiguet.png",
+        "../multimedia/TagHeuer.jpg",
+        "../multimedia/JaguarSaphire.png",
+        "../multimedia/rolex_submariner.png",
+        "../multimedia/iwc_pilot.png",
+        "../multimedia/zenith_elite.png",
+        "../multimedia/hublot.png",
+        "../multimedia/breitling.png",
+        "../multimedia/cartier.png"
     ];
 
     let indice = 0;
